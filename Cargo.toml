@@ -1,9 +1,10 @@
 [package]
 name = "nai-tokenizer"
+author = "LoopyAshy"
 version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
-description = "A rust port of NovelAI's tokeniser"
+description = "A rust port of NovelAI's tokeniser."
 repository = "https://github.com/LoopyAshy/NAI-Tokenizer.rs/"
 keywords = ["tokenizer", "ai", "novelai", "nai", "text-generation"]
 categories = ["encoding", "text-processing", "algorithms"]
