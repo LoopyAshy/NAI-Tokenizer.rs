@@ -1,0 +1,52 @@
+[package]
+name = "tokeniser"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = 'fat'
+debug-assertions = false
+codegen-units = 1
+
+[profile.test]
+opt-level = 2
+lto = 'fat'
+
+[profile.bench]
+opt-level = 3
+debug = false
+lto = 'fat'
+debug-assertions = false
+codegen-units = 1
+
+[dependencies]
+fancy-regex = "0.11.0"
+indexmap = { version = "1.9.3", features = ["serde"] }
+serde = { version = "1.0.160", features = ["derive"], default-features = false }
+serde_json = { version = "1.0.96", features = ["std"], default-features = false }
+ahash = { version = "0.8.3", features = ["std", "serde"], default-features = false }
+parking_lot = { version = "0.12.1" }
+static_assertions = "1.1.0"
+
+[dev-dependencies]
+criterion = { version = "0.4.0" }
+
+[features]
+default = ["runtime-rng"]
+
+runtime-rng = ["ahash/runtime-rng"]
+
+compile-time-rng = ["ahash/compile-time-rng"]
+
+no-rng = ["ahash/no-rng"]
+
+send = []
+
+[[bench]]
+name = "benches"
+path = "src/benches.rs"
+harness = false
