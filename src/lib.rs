@@ -609,57 +609,57 @@ mod tests {
 
     #[test]
     fn test_nerdstash2() {
-        let encoder = Tokenizer::from_path("nerdstash_tokenizer_v2.json").unwrap();
-        let result = encoder.encode("Hello, world!\nI have a huge willy.");
+        let encoder = Tokenizer::from_path("data/nerdstash_tokenizer_v2.json").unwrap();
+        let result = encoder.encode("Hello, world!\nI have a huge love for you all.");
         assert_eq!(
             result,
-            [13071, 49231, 1190, 49338, 85, 49246, 506, 333, 4310, 567, 49227, 49230]
+            [13071, 49231, 1190, 49338, 85, 49246, 506, 333, 4310, 1451, 404, 399, 550, 49230]
         );
         let result = encoder.decode(&result);
-        assert_eq!(result, "Hello, world!\nI have a huge willy.");
+        assert_eq!(result, "Hello, world!\nI have a huge love for you all.");
     }
     #[test]
     fn test_nerdstash1() {
-        let encoder = Tokenizer::from_path("nerdstash_tokenizer.json").unwrap();
-        let result = encoder.encode("Hello, world!\nI have a huge willy.");
+        let encoder = Tokenizer::from_path("data/nerdstash_tokenizer.json").unwrap();
+        let result = encoder.encode("Hello, world!\nI have a huge love for you all.");
         assert_eq!(
             result,
-            [13071, 49231, 1190, 49338, 85, 49246, 506, 333, 4310, 567, 49227, 49230]
+            [13071, 49231, 1190, 49338, 85, 49246, 506, 333, 4310, 1451, 404, 399, 550, 49230]
         );
         let result = encoder.decode(&result);
-        assert_eq!(result, "Hello, world!\nI have a huge willy.");
+        assert_eq!(result, "Hello, world!\nI have a huge love for you all.");
     }
     #[test]
     fn test_gpt2() {
-        let encoder = Tokenizer::from_path("gpt2_tokenizer.json").unwrap();
-        let result = encoder.encode("Hello, world!\nI have a huge willy.");
+        let encoder = Tokenizer::from_path("data/gpt2_tokenizer.json").unwrap();
+        let result = encoder.encode("Hello, world!\nI have a huge love for you all.");
         assert_eq!(
             result,
-            [15496, 11, 995, 0, 198, 40, 423, 257, 3236, 481, 88, 13]
+            [15496, 11, 995, 0, 198, 40, 423, 257, 3236, 1842, 329, 345, 477, 13]
         );
         let result = encoder.decode(&result);
-        assert_eq!(result, "Hello, world!\nI have a huge willy.");
+        assert_eq!(result, "Hello, world!\nI have a huge love for you all.");
     }
     #[test]
     fn test_genji() {
-        let encoder = Tokenizer::from_path("genji_tokenizer.json").unwrap();
-        let result = encoder.encode("Hello, world!\nI have a huge willy.");
+        let encoder = Tokenizer::from_path("data/genji_tokenizer.json").unwrap();
+        let result = encoder.encode("Hello, world!\nI have a huge love for you all.");
         assert_eq!(
             result,
-            [15496, 11, 266, 1764, 0, 198, 40, 423, 257, 3236, 481, 88, 13]
+            [15496, 11, 266, 1764, 0, 198, 40, 423, 257, 3236, 1842, 329, 345, 477, 13]
         );
         let result = encoder.decode(&result);
-        assert_eq!(result, "Hello, world!\nI have a huge willy.");
+        assert_eq!(result, "Hello, world!\nI have a huge love for you all.");
     }
     #[test]
     fn test_pile() {
-        let encoder = Tokenizer::from_path("pile_tokenizer.json").unwrap();
-        let result = encoder.encode("Hello, world!\nI have a huge willy.");
+        let encoder = Tokenizer::from_path("data/pile_tokenizer.json").unwrap();
+        let result = encoder.encode("Hello, world!\nI have a huge love for you all.");
         assert_eq!(
             result,
-            [12092, 13, 1533, 2, 187, 42, 452, 247, 5699, 259, 9352, 15]
+            [12092, 13, 1533, 2, 187, 42, 452, 247, 5699, 2389, 323, 368, 512, 15]
         );
         let result = encoder.decode(&result);
-        assert_eq!(result, "Hello, world!\nI have a huge willy.");
+        assert_eq!(result, "Hello, world!\nI have a huge love for you all.");
     }
 }
