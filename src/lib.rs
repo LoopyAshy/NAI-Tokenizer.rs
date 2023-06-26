@@ -34,6 +34,7 @@ struct BGERank {
     bigram: GPTPair,
 }
 
+#[derive(Debug)]
 struct SpecialsTreeNode {
     char: String,
     children: Vec<SpecialsTreeNode>,
@@ -116,6 +117,7 @@ impl Display for Error {
 /// let word: String = tokenizer.decode(&tokens).expect("Failed to decode tokens");
 /// assert_eq!(word, "Hello, World!");
 /// ```
+#[derive(Debug)]
 pub struct Tokenizer {
     specials: Vocabulary,
     specials_tree: SpecialsTreeNode,
