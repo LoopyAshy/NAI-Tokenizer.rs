@@ -1,3 +1,6 @@
+[![Crates.io](https://img.shields.io/crates/v/nai-tokenizer.svg)](https://crates.io/crates/nai-tokenizer)
+![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)
+[![Crates.io](https://img.shields.io/crates/d/nai-tokenizer.svg)](https://crates.io/crates/nai-tokenizer)
 # NAI-Tokenizer.rs
 A rust port of NovelAI's tokenizer.
 
